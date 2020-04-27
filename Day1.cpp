@@ -9,8 +9,6 @@ class Book{
 	string author;//Book Author
 	string publisher;//Book publisher
 	float price;// Book Price
-	//int totalCopies;// Number of copies Available
-  	//int Issued;// Number of book issued
 	public:
 	int Issued;// Number of book issued
 	void getData();
