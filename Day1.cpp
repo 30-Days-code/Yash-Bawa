@@ -32,17 +32,21 @@ class Book{
 		cout<<"To issue a book press 1";
 		int i;
 		cin>>i;
-		if(i==1){		
+		if(i==1){
+		if(totalCopies>0){
 		totalCopies=-totalCopies;
 		cout<<"Book Issued";
+		}
 		}
 		else
 		cout<<"Book not issued";
 	}
 	void Book::bookReturn()
 	{
+		if(totalCopies<x){
 		totalCopies=+totalCopies;
 		cout<<"Book Returned";
+		}
 	}
 	void Book::bookInfo()
 	{
@@ -53,8 +57,10 @@ int main()
 {
 Book b;
 b.getData();
+int q;
 cout<<"Enter total copies";
-cin>>totalCopies;
+cin>>q;
+totalCopies=q;
 cout<<"Press 1 for book issue ,Press 2 for book return, press 3 for book info";
 int x;
 cin>>x;
