@@ -16,6 +16,7 @@ class Book{
 	void bookIssue();
 	void bookReturn();
 	void bookInfo();
+	void printData();//To print filled details
 };
 	void Book::getData()
 	{
@@ -62,19 +63,33 @@ class Book{
 		cout<<nbr<<"\n"<<name<<"\n"<<author<<"\n"<<publisher<<"\n";
 		cout<<price<<"\n"<<totalCopies<<"\n";
 	}
+	void printData()
+	{
+		cout<<name<<"\n";
+	}
 int main()
 {
-int l;
+int l,i;
 cout<<"Enter the number to different types of books available "<<"\n";
 cin>>l;
 Book b[l];
-for(int i=0;i<l;i++)
+for(i=0;i<l;i++)
 {
 b[i].getData();
 }
+for(i=0;i<l;i++)
+{
+cout<<i+1<<" :: "<<b[i].printData();
+}
+string choice;
+for(i=0;i<l;i++)
+{
+if(b[i].printdata==choice)
+break;
+}
 cout<<"Press 1 for book issue ,Press 2 for book return, press 3 for book info";
 int x;
-for(int i=0;i<l;i++)
+while(x!=4)
 {
 cin>>x;
 switch(x)
