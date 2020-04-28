@@ -12,7 +12,6 @@ class Book{
 	float price;// Book Price
 	int Issued=0;
 	public:
-	int Issued;// Number of book issued
 	void getData();
 	void bookIssue();
 	void bookReturn();
