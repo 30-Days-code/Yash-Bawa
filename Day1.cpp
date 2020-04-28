@@ -10,7 +10,7 @@ class Book{
 	string author;//Book Author
 	string publisher;//Book publisher
 	float price;// Book Price
-	int Issued=0;
+	int Issued;
 	public:
 	void getData();
 	void bookIssue();
@@ -30,6 +30,7 @@ class Book{
 		cin>>q;
 		totalCopies==q;
 		cout<<"Enter details for next book"<<endl;
+		Issued=0;
 		
 		
 	}
