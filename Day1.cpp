@@ -23,7 +23,8 @@ class Book{
 		cout<<"Enter book number"<<"\n";
 		cin>>nbr;
 		cout<<"Enter book name, book author and book publisher"<<"\n";
-		cin>>name>>author>>publisher;
+		cin>>name;
+		cin>>author>>publisher;
 		cout<<"Enter book price";
 		cin>>price;
 		int q;
@@ -44,7 +45,7 @@ class Book{
 		if(i==1){
 		if(totalCopies>0){
 		totalCopies=-totalCopies;
-		cout<<"Book Issued: "<<issued++;
+		cout<<"Book Issued: "<<Issued++;
 		}
 		}
 		else
@@ -52,9 +53,9 @@ class Book{
 	}
 	void Book::bookReturn()
 	{
-		if(issued<totalCopies){
+		if(Issued<totalCopies){
 		totalCopies=+totalCopies;
-		issued--;
+		Issued--;
 		cout<<"Book Returned";
 		}
 	}
@@ -63,7 +64,7 @@ class Book{
 		cout<<nbr<<"\n"<<name<<"\n"<<author<<"\n"<<publisher<<"\n";
 		cout<<price<<"\n"<<totalCopies<<"\n";
 	}
-	void printData()
+	void Book::printData()
 	{
 		cout<<name<<"\n";
 	}
@@ -73,23 +74,23 @@ int l,i;
 cout<<"Enter the number to different types of books available "<<"\n";
 cin>>l;
 Book b[l];
-for(i=0;i<l;i++)
+for(i=1;i<=l;i++)
 {
 b[i].getData();
 }
-for(i=0;i<l;i++)
+for(i=1;i<=l;i++)
 {
-cout<<i+1<<" :: "<<b[i].printData();
+cout<<i<<"::"<<b[i].printData()<<"\n";
 }
 string choice;
-for(i=0;i<l;i++)
+for(i=1;i<=l;i++)
 {
-if(b[i].printdata==choice)
+if(b[i].printData()==choice)
 break;
 }
 cout<<"Press 1 for book issue ,Press 2 for book return, press 3 for book info";
 int x;
-while(x!=4)
+while(1)
 {
 cin>>x;
 switch(x)
