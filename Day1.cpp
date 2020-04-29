@@ -74,16 +74,17 @@ int l,i;
 cout<<"Enter the number to different types of books available "<<"\n";
 cin>>l;
 Book b[l];
-for(i=1;i<=l;i++)
+for(i=0;i<l;i++)
 {
 b[i].getData();
 }
-for(i=1;i<=l;i++)
+for(i=0;i<l;i++)
 {
-cout<<i<<"::"<<b[i].printData()<<"\n";
+cout<<b[i].printData()<<"\n";
 }
 string choice;
-for(i=1;i<=l;i++)
+cin>>choice;
+for(i=0;i<l;i++)
 {
 if(b[i].printData()==choice)
 break;
